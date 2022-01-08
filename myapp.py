@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 import datetime
 
-from bokeh.io import output_file, output_notebook
+from bokeh.io import output_file, output_notebook, curdoc
 from bokeh.plotting import figure, show
 from bokeh.models import ColumnDataSource, CDSView, GroupFilter, DatetimeTickFormatter, HoverTool
 from bokeh.models import HoverTool, value, LabelSet, Legend, ColumnDataSource,LinearColorMapper,BasicTicker, PrintfTickFormatter, ColorBar
@@ -133,7 +133,12 @@ from bokeh.plotting import figure
 
 # fungsi untuk menampilkan produk yang akan tersambung dengan show()
 output_notebook()
-output_file('interactive_tabs.html', title='PERGERAKAN SAHAM BNI, BRI, BCA')
+#output_file('interactive_tabs.html', title='PERGERAKAN SAHAM BNI, BRI, BCA')
+
+#add title
+isi = """<h1>Fluktuasi Saham BNI, BRI, dan BCA</h1>
+<h3><i>Click Legend to HIDE Data</i><h3>"""
+title = Div(text=isi)
 
 # mengonversikan data figure value, volume, dan change ke dalam variabel tab
 tab1 = Panel(child=fig, title="Value")
@@ -144,7 +149,9 @@ tab3 = Panel(child=fig3, title="Change")
 figs = Tabs(tabs=[ tab1, tab2,tab3 ])
 
 # menampilkan tabs untuk data value, volume, dan change
-show(figs)
+#add layout
+curdoc().add_root(column(title,figs))
+show(column(title,figs))
 
 """Menampilkan data dalam bentuk bokeh interactive (Select) Dropdown"""
 
@@ -153,7 +160,7 @@ from bokeh.io import show
 
 output_notebook()
 
-output_file('interactive_select.html', title='PERGERAKAN SAHAM BNI, BRI, BCA')
+#output_file('interactive_select.html', title='PERGERAKAN SAHAM BNI, BRI, BCA')
 
 select = Select(title="Pergerakan Saham", value="BASE", options=['Value', 'Volume', 'Change'])
 select.js_on_change('value', CustomJS(code="""
@@ -161,4 +168,4 @@ select.js_on_change('value', CustomJS(code="""
 """))
 
 # Show the tabbed layout
-show(select)
+#show(select)
