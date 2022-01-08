@@ -26,7 +26,7 @@ from bokeh.models.widgets import Tabs, Panel, Select
 # Mengambil data dari Gdrive
 from google.colab import drive
 drive.mount('/gdrive')
-# %cd /gdrive/My Drive
+%cd /gdrive/My Drive
 
 """# Load Dataset"""
 
