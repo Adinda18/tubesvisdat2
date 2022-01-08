@@ -22,16 +22,14 @@ from bokeh.models.widgets import Tabs, Panel, Select
 
 """# Connect G-Drive"""
 
-# Commented out IPython magic to ensure Python compatibility.
-# Mengambil data dari Gdrive
+#kode untuk melakukan mounting ke googledrive
 from google.colab import drive
-drive.mount('/gdrive')
-# %cd /gdrive/My Drive
+drive.mount('/content/drive')
 
 """# Load Dataset"""
 
-# Memasukkan dataset saham
-df_saham = pd.read_csv('saham.csv',parse_dates=[0])
+#melakukan pengambilan data dari googledrive
+df_saham = pd.read_csv('drive/My Drive/saham.csv',parse_dates=[0])
 
 # Menampilkan dataset saham
 df_saham
