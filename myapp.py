@@ -15,7 +15,7 @@ import datetime
 
 from bokeh.io import output_file, output_notebook, curdoc
 from bokeh.plotting import figure, show
-from bokeh.models import ColumnDataSource, CDSView, GroupFilter, DatetimeTickFormatter, HoverTool
+from bokeh.models import ColumnDataSource, CDSView, GroupFilter, DatetimeTickFormatter, HoverTool, Div
 from bokeh.models import HoverTool, value, LabelSet, Legend, ColumnDataSource,LinearColorMapper,BasicTicker, PrintfTickFormatter, ColorBar
 from bokeh.layouts import row, column, gridplot
 from bokeh.models.widgets import Tabs, Panel, Select
