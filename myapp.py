@@ -20,19 +20,14 @@ from bokeh.models import HoverTool, value, LabelSet, Legend, ColumnDataSource,Li
 from bokeh.layouts import row, column, gridplot
 from bokeh.models.widgets import Tabs, Panel, Select
 
-"""# Connect G-Drive"""
-
-#kode untuk melakukan mounting ke googledrive
-from google.colab import drive
-drive.mount('/content/drive')
 
 """# Load Dataset"""
 
-#melakukan pengambilan data dari googledrive
-df_saham = pd.read_csv('drive/My Drive/saham.csv',parse_dates=[0])
+# Memasukkan dataset saham
+df_saham = pd.read_csv('saham.csv',parse_dates=[0])
 
 # Menampilkan dataset saham
-df_saham
+df_saham.head()
 
 """Keterangan Nama Kolom :
 
