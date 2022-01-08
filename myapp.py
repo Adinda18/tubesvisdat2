@@ -9,16 +9,13 @@ Original file is located at
 # Import Libraries
 """
 
+from bokeh.io import output_notebook, curdoc
+from bokeh.plotting import figure, show
+from bokeh.models.widgets import Tabs, Panel, Select
+from bokeh.models import ColumnDataSource, GroupFilter, CDSView, HoverTool, Div
+from bokeh.layouts import column, widgetbox
 import pandas as pd
 import numpy as np
-import datetime
-
-from bokeh.io import output_file, output_notebook
-from bokeh.plotting import figure, show
-from bokeh.models import ColumnDataSource, CDSView, GroupFilter, DatetimeTickFormatter, HoverTool
-from bokeh.models import HoverTool, value, LabelSet, Legend, ColumnDataSource,LinearColorMapper,BasicTicker, PrintfTickFormatter, ColorBar
-from bokeh.layouts import row, column, gridplot
-from bokeh.models.widgets import Tabs, Panel, Select
 
 
 """# Load Dataset"""
