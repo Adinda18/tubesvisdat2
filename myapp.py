@@ -65,6 +65,9 @@ df_saham
 """
 
 # Mengambil data nama perusahaan yang ada dalam dataset yaitu : BNI, BRI, dan BCA
+
+output_notebook()
+
 bri = df_saham[df_saham['name'] == 'BRI']
 bni = df_saham[df_saham['name'] == 'BNI']
 bca = df_saham[df_saham['name'] == 'BCA']
@@ -89,6 +92,8 @@ fig.legend.location = 'center_right'
 
 """### Volume"""
 
+output_notebook()
+
 tooltip= [('name', '@name'), ('volume', '$y{0.2f}')]
 TOOLS = "hover,save,pan,box_zoom,reset,wheel_zoom,tap"
 
@@ -103,6 +108,8 @@ fig2.legend.click_policy="hide"
 fig2.legend.location = 'center_right'
 
 """### Change"""
+
+output_notebook()
 
 tooltip= [('name', '@name'),('change', '$y{0.2f}')]
 TOOLS = "hover,save,pan,box_zoom,reset,wheel_zoom,tap"
