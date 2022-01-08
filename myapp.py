@@ -119,9 +119,9 @@ fig3.legend.location = 'center_right'
 """### Convert Data dalam Bentuk Bokeh Widgets Interactive : Tabs """
 
 # import library untuk widgets bokeh tabs
-from bokeh.models.widgets import Panel, Tabs
+#from bokeh.models.widgets import Panel, Tabs
 #from bokeh.io import output_file, show
-from bokeh.plotting import figure
+#from bokeh.plotting import figure
 
 # fungsi untuk menampilkan produk yang akan tersambung dengan show()
 output_notebook()
