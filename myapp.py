@@ -144,20 +144,3 @@ figs = Tabs(tabs=[ tab1, tab2,tab3 ])
 
 # menampilkan tabs untuk data value, volume, dan change
 show(figs)
-
-"""Menampilkan data dalam bentuk bokeh interactive (Select) Dropdown"""
-
-from bokeh.models import CustomJS, Select
-from bokeh.io import show
-
-output_notebook()
-
-output_file('interactive_select.html', title='PERGERAKAN SAHAM BNI, BRI, BCA')
-
-select = Select(title="Pergerakan Saham", value="BASE", options=['Value', 'Volume', 'Change'])
-select.js_on_change('value', CustomJS(code="""
-    console.log('select: value=' + this.value, this.toString())
-"""))
-
-# Show the tabbed layout
-show(select)
