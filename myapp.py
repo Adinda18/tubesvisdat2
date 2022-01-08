@@ -125,7 +125,7 @@ from bokeh.plotting import figure
 
 # fungsi untuk menampilkan produk yang akan tersambung dengan show()
 output_notebook()
-output_file('interactive_tabs.html', title='PERGERAKAN SAHAM BNI, BRI, BCA')
+#output_file('interactive_tabs.html', title='PERGERAKAN SAHAM BNI, BRI, BCA')
 
 # mengonversikan data figure value, volume, dan change ke dalam variabel tab
 tab1 = Panel(child=fig, title="Value")
@@ -144,8 +144,7 @@ from bokeh.models import CustomJS, Select
 from bokeh.io import show
 
 output_notebook()
-
-output_file('interactive_select.html', title='PERGERAKAN SAHAM BNI, BRI, BCA')
+#output_file('interactive_select.html', title='PERGERAKAN SAHAM BNI, BRI, BCA')
 
 select = Select(title="Pergerakan Saham", value="BASE", options=['Value', 'Volume', 'Change'])
 select.js_on_change('value', CustomJS(code="""
