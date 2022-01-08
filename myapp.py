@@ -71,10 +71,9 @@ bni_cds = ColumnDataSource(bni)
 bca_cds = ColumnDataSource(bca)
 
 tooltip= [('name', '@name'), ('value', '$y{0.2f}')]
-TOOLS = "hover,save,pan,box_zoom,reset,wheel_zoom,tap"
 
 fig = figure(x_axis_type='datetime', plot_height=500, plot_width=1000, title='',
-             x_axis_label='Date', y_axis_label='Value', tooltips = tooltip, tools = TOOLS)
+             x_axis_label='Date', y_axis_label='Value', tooltips = tooltip)
 
 fig.line('date', 'value', color="blue", legend_label='VALUE BRI', source=bri_cds)
 fig.line('date', 'value', color="red", legend_label='VALUE BNI', source=bni_cds)
@@ -86,10 +85,9 @@ fig.legend.location = 'center_right'
 """### Volume"""
 
 tooltip= [('name', '@name'), ('volume', '$y{0.2f}')]
-TOOLS = "hover,save,pan,box_zoom,reset,wheel_zoom,tap"
 
 fig2 = figure(x_axis_type='datetime', plot_height=500, plot_width=1000, title='Volume',
-             x_axis_label='Date', y_axis_label='Volume', tooltips = tooltip, tools = TOOLS)
+             x_axis_label='Date', y_axis_label='Volume', tooltips = tooltip)
 
 fig2.line('date', 'volume', color="blue", legend_label='VOLUME BRI', source=bri_cds)
 fig2.line('date', 'volume', color="red", legend_label='VOLUME BNI', source=bni_cds)
@@ -101,10 +99,9 @@ fig2.legend.location = 'center_right'
 """### Change"""
 
 tooltip= [('name', '@name'),('change', '$y{0.2f}')]
-TOOLS = "hover,save,pan,box_zoom,reset,wheel_zoom,tap"
 
 fig3 = figure(x_axis_type='datetime', plot_height=500, plot_width=1000, title='Change',
-             x_axis_label='Date', y_axis_label='Change', tooltips = tooltip, tools = TOOLS)
+             x_axis_label='Date', y_axis_label='Change', tooltips = tooltip)
 
 fig3.line('date', 'change', color="blue", legend_label='PERUBAHAN HARGA BRI', source=bri_cds)
 fig3.line('date', 'change', color="red", legend_label='PERUBAHAN HARGA BNI', source=bni_cds)
